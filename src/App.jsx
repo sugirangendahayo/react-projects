@@ -8,32 +8,32 @@ import { useEffect } from "react";
 import Jokes from "./components/Jokes";
 
 function App() {
-  const buttons = ["button 1", "button 2", "button 3"];
-  const animals = [
-    "🐕 dog",
-    "🐈 cat",
-    "🐤 chicken",
-    "🐄 cow",
-    "🐏 sheep",
-    "🐎 horse",
-  ];
-  const exerciseLinks = [
-    "Home",
-    "Exercise 1",
-    "Exercise 2",
-    "Exercise 3",
-    "Exercise 4",
-    "Exercise 5",
-    "Exercise 6",
-    "Exercise 7",
-    "Exercise 8",
-    "Exercise 9",
-  ];
+  // const buttons = ["button 1", "button 2", "button 3"];
+  // const animals = [
+  //   "🐕 dog",
+  //   "🐈 cat",
+  //   "🐤 chicken",
+  //   "🐄 cow",
+  //   "🐏 sheep",
+  //   "🐎 horse",
+  // ];
+  // const exerciseLinks = [
+  //   "Home",
+  //   "Exercise 1",
+  //   "Exercise 2",
+  //   "Exercise 3",
+  //   "Exercise 4",
+  //   "Exercise 5",
+  //   "Exercise 6",
+  //   "Exercise 7",
+  //   "Exercise 8",
+  //   "Exercise 9",
+  // ];
   const [jokes, setJokes] = useState([]);
 
   useEffect(() => {
     async function fetchJokes() {
-      const response = await fetch("../public/data/jokes.json");
+      const response = await fetch("./data/jokes.json");
       const data = await response.json();
       setJokes(data);
     }
