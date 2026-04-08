@@ -4,6 +4,8 @@ import UserClicks from "./components/UserClicks";
 import BtnComponent from "./components/BtnComponent";
 import AnimalList from "./components/AnimalList";
 import GreetingForm from "./components/GreetingForm";
+import { useEffect } from "react";
+import Jokes from "./components/Jokes";
 
 function App() {
   const buttons = ["button 1", "button 2", "button 3"];
@@ -27,6 +29,16 @@ function App() {
     "Exercise 8",
     "Exercise 9",
   ];
+  const [jokes, setJokes] = useState([]);
+
+  useEffect(() => {
+    async function fetchJokes() {
+      const response = await fetch("../public/data/jokes.json");
+      const data = await response.json();
+      setJokes(data);
+    }
+    fetchJokes();
+  }, []);
   return (
     <>
       {/* 
@@ -63,7 +75,8 @@ function App() {
       =======================
      */}
       <div className="flex justify-center items-center h-screen">
-        <GreetingForm />
+        {/* <GreetingForm /> */}
+        <Jokes jokes={jokes} />
       </div>
     </>
   );
