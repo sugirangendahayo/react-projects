@@ -2,9 +2,31 @@ import { useState } from "react";
 import HelloWord from "./components/HelloWord";
 import UserClicks from "./components/UserClicks";
 import BtnComponent from "./components/BtnComponent";
+import AnimalList from "./components/AnimalList";
+import GreetingForm from "./components/GreetingForm";
 
 function App() {
   const buttons = ["button 1", "button 2", "button 3"];
+  const animals = [
+    "🐕 dog",
+    "🐈 cat",
+    "🐤 chicken",
+    "🐄 cow",
+    "🐏 sheep",
+    "🐎 horse",
+  ];
+  const exerciseLinks = [
+    "Home",
+    "Exercise 1",
+    "Exercise 2",
+    "Exercise 3",
+    "Exercise 4",
+    "Exercise 5",
+    "Exercise 6",
+    "Exercise 7",
+    "Exercise 8",
+    "Exercise 9",
+  ];
   return (
     <>
       {/* 
@@ -15,7 +37,7 @@ function App() {
       ======================
 
       ==== EXERCISE 2 ======
-      <UserClicks />
+      <UserClicks exerciseLinks={exerciseLinks} />
       ======================
 
 
@@ -31,7 +53,18 @@ function App() {
         ))}
       </div> 
      ====================== 
-      */}
+
+     
+     ==== EXERCISE 4 ===== 
+    <div className="flex justify-center items-center h-screen">
+
+    <AnimalList animals={animals} />
+    </div>
+      =======================
+     */}
+      <div className="flex justify-center items-center h-screen">
+        <GreetingForm />
+      </div>
     </>
   );
 }
