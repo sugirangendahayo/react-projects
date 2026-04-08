@@ -29,7 +29,7 @@ const UserClicks = () => {
       </ul>
       <div className="flex justify-center items-center mt-[10%]">
         
-      <button className="bg-black text-white rounded cursor-pointer px-3 py-2" onClick={handleClick}>Click</button>
+      {/* <button className="bg-black text-white rounded cursor-pointer px-3 py-2" onClick={handleClick}>Click</button> */}
       </div>
      
     </div>
