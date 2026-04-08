@@ -7,14 +7,19 @@ function App() {
   const buttons = ["button 1", "button 2", "button 3"];
   return (
     <>
-      {/* Exercise 1 Start*/}
-      {/* <div className="p-4">
+      {/* 
+      ===== EXERCISE 1 ======
+      <div className="p-4">
         <HelloWord />
-      </div> */}
-      {/* Exercise 1 End */}
-      {/* Exercise 2 Start*/}
+      </div>
+      ======================
+
+      ==== EXERCISE 2 ======
       <UserClicks />
-      {/* Exercise 2 End */}
+      ======================
+
+
+      ==== EXERCISE 3 ======
       <div className="flex justify-center items-center gap-4">
         {buttons.map((label, index) => (
           <BtnComponent
@@ -24,7 +29,9 @@ function App() {
             {label}
           </BtnComponent>
         ))}
-      </div>
+      </div> 
+     ====================== 
+      */}
     </>
   );
 }
