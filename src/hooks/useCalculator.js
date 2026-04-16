@@ -2,9 +2,7 @@ import { useState } from 'react'
 
 export function useCalculator() {
   // Three pieces of state:
-  // current  → what the user is currently typing
-  // previous → the first number in a pending operation
-  // operator → the pending operator (+, -, ×, ÷)
+
   const [current,  setCurrent]  = useState('')
   const [previous, setPrevious] = useState('')
   const [operator, setOperator] = useState('')
