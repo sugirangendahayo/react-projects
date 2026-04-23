@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 export function useCalculator() {
-  // Three pieces of state:
+
 
   const [current,  setCurrent]  = useState('')
   const [previous, setPrevious] = useState('')
@@ -9,7 +9,7 @@ export function useCalculator() {
 
   function handlePress(label) {
 
-    // --- Number or decimal pressed ---
+    
     if (!isNaN(label) || label === '.') {
       // Prevent multiple dots
       if (label === '.' && current.includes('.')) return
@@ -17,16 +17,16 @@ export function useCalculator() {
       return
     }
 
-    // --- Operator pressed (+, -, ×, ÷) ---
+    
     if (['+', '-', '×', '÷'].includes(label)) {
-      if (!current) return  // nothing typed yet
+      if (!current) return  
       setPrevious(current)
       setOperator(label)
       setCurrent('')
       return
     }
 
-    // --- Equals ---
+   
     if (label === '=') {
       if (!current || !previous || !operator) return
       const a = parseFloat(previous)
@@ -39,7 +39,7 @@ export function useCalculator() {
       return
     }
 
-    // --- AC (all clear) ---
+  
     if (label === 'AC') {
       setCurrent('')
       setPrevious('')
